@@ -10,6 +10,9 @@ export const Colors: {[key: string]: string} = {
   goldTheme1: '#ECD996',
   goldTheme2: '#FFF5D1',
   success: '#34C759',
+  errorText: 'red',
+  appFF5942: '#FF5942',
+  app2196F3: '#2196F3',
 };
 
 export const FONTS: {[key: string]: string} = {
