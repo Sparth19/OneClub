@@ -1,6 +1,8 @@
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React, {FC} from 'react';
 import {Colors, FONTS, FONT_SIZE} from './src/themes/AppTheme';
+import SvgIcon from './src/components/SvgIcon';
+import Metrics from './src/themes/Metrics';
 
 const App: FC = () => {
   return (
@@ -14,6 +16,7 @@ const App: FC = () => {
         }}>
         Welcome!
       </Text>
+      <SvgIcon name={'loginThumb'} h={150} w={Metrics.width} />
     </SafeAreaView>
   );
 };
