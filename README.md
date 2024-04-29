@@ -1,79 +1,38 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Stock Market App
 
-# Getting Started
+This is a mobile application built with React Native and TypeScript that provides live stock market data from the RapidAPI Gainer API. Users can search for stocks and view details, as well as swipe to buy using a slide animation implemented with PanResponder and Animated from React Native.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Features
 
-## Step 1: Start the Metro Server
+- Fetches live stock market data from RapidAPI's Gainer API
+- Allows users to search for stocks
+- Displays stock details including price, volume, and percentage change
+- Implements swipe to buy feature with slide animation using PanResponder and Animated
+- Utilizes local push notifications for important updates using Notifee
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Installation
 
-To start Metro, run the following command from the _root_ of your React Native project:
+    1. Clone this repository to your local machine.
+    2. Navigate to the project directory.
+    3. Run npm install to install dependencies.
+    4. Run pod install in ios directory to install cocoapods.
+    5. Replace <YOUR_RAPIDAPI_KEY> in the api.ts file with your RapidAPI key.
+    6. Run npx react-native run-android to start the Android app.
+    7. Run npx react-native run-ios to start the iOS app.
 
-```bash
-# using npm
-npm start
+## Usage/Examples
 
-# OR using Yarn
-yarn start
-```
+- On the login screen you can give any valid credentials.
+- On the home screen, view the list of gainer stocks fetched from the RapidAPI Gainer API.
+- Scroll up and use the search bar to search for specific stocks by name or symbol.
+- Swipe right on a stock card to buy the stock using the slide animation.
+- View stock details by tapping on a stock card.
 
-## Step 2: Start your Application
+## Tech Stack
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- React Native
+- TypeScript
+- React navigation
+- Redux toolkit
+- RapidAPI
+- Notifee
