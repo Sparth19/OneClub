@@ -1,14 +1,25 @@
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React, {FC} from 'react';
-import {Colors, FONTS, FONT_SIZE} from './src/themes/AppTheme';
-import SvgIcon from './src/components/SvgIcon';
-import Metrics from './src/themes/Metrics';
-import LoginScreen from './src/screens/Login/LoginScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
+import AppNavigator from './src/navigators/AppNavigator';
+import {persistor, store} from './src/store/store';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import 'react-native-devsettings/withAsyncStorage';
+import SplashScreen from './src/screens/Login/SplashScreen';
 
 const App: FC = () => {
-  return <LoginScreen />;
+  return (
+    <GestureHandlerRootView style={{flex: 1}}>
+      <Provider store={store}>
+        <PersistGate loading={<SplashScreen />} persistor={persistor}>
+          <NavigationContainer>
+            <AppNavigator />
+          </NavigationContainer>
+        </PersistGate>
+      </Provider>
+    </GestureHandlerRootView>
+  );
 };
 
 export default App;
-
-const styles = StyleSheet.create({});
