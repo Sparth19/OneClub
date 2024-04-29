@@ -72,7 +72,7 @@ const LoginScreen: FC<LoginScreenProps> = props => {
                 onChangeText={handleChange('email')}
                 value={values?.email}
                 onFocus={() => setInputFocus({email: true, password: false})}
-                onBlur={() => handleBlur('email')}
+                onBlur={handleBlur('email')}
                 isFocused={inputFocus.email}
                 keyboardType="email-address"
                 errors={errors.email}
@@ -85,7 +85,7 @@ const LoginScreen: FC<LoginScreenProps> = props => {
                   onChangeText={handleChange('password')}
                   value={values?.password}
                   onFocus={() => setInputFocus({password: true, email: false})}
-                  onBlur={() => handleBlur('password')}
+                  onBlur={handleBlur('password')}
                   isFocused={inputFocus.password}
                   secureTextEntry={hidePass}
                   onHidePress={() => setHidePass(!hidePass)}
