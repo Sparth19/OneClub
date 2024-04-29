@@ -31,22 +31,14 @@ export default StyleSheet.create({
   headerText: {
     fontFamily: FONTS.Inter700,
     fontSize: FONT_SIZE.regular,
-    color: Colors.gray900,
+    color: Colors.darkBase1,
     marginBottom: Metrics.rfv(10),
-    // textAlign: 'center',
   },
   labelText: {
     fontFamily: FONTS.Inter400,
     fontSize: FONT_SIZE.small_medium,
-    color: Colors.gray700,
+    color: Colors.darkBase2,
     textAlign: 'center',
-  },
-  clipBoardView: {
-    position: 'absolute',
-    alignItems: 'flex-end',
-    alignSelf: 'flex-end',
-    right: Metrics.rfv(20),
-    // bottom: isIphoneX() ? Metrics.rfv(20) : Metrics.rfv(10),
   },
   loginBtn: {
     marginTop: Metrics.rfv(60),

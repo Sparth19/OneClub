@@ -17,7 +17,7 @@ interface LoginInputProps {
   onFocus: () => void;
   value: string;
   rightIcon?: boolean;
-  keyboardType?: string;
+  keyboardType?: KeyboardTyp;
   name: string;
   placeholder: string;
   secureTextEntry?: boolean;

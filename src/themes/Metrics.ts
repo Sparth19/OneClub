@@ -17,10 +17,10 @@ const calculateDeviceHeight = (): number => {
 
 // Check if the device is an iPhone with a notch
 const isIphoneNotch = (): boolean =>
-  Platform.OS === 'ios' &&
-  !Platform.isPad &&
-  !Platform.isTV &&
-  [780, 812, 844, 852, 896, 926, 932].includes(height) &&
+  (Platform.OS === 'ios' &&
+    !Platform.isPad &&
+    !Platform.isTV &&
+    [780, 812, 844, 852, 896, 926, 932].includes(height)) ||
   [780, 812, 844, 852, 896, 926, 932].includes(width);
 
 // Check if the device is a tablet

@@ -4,6 +4,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   ScrollView,
+  StatusBar,
   Text,
   View,
 } from 'react-native';
@@ -14,6 +15,10 @@ import {Formik} from 'formik';
 import AppButton from '../../components/common/AppButton';
 import {loginValidationSchema} from '../../helper/validator';
 import LoginInput from '../../components/LoginInput';
+import {useDispatch, useSelector} from 'react-redux';
+import {loginSuccess} from '../../store/reducers/authSlice';
+import {Colors} from '../../themes/AppTheme';
+import {AppDispatch, RootState} from '../../store/store';
 
 interface LoginScreenProps {}
 interface LoginFormValues {
@@ -27,6 +32,7 @@ interface InputFocusState {
 }
 
 const LoginScreen: FC<LoginScreenProps> = props => {
+  const dispatch: AppDispatch = useDispatch();
   const initialLoginForm: LoginFormValues = {email: '', password: ''};
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -36,10 +42,10 @@ const LoginScreen: FC<LoginScreenProps> = props => {
     password: false,
   });
 
-  const submitLogin = async (values: any) => {
+  const submitLogin = async ({email, password}: LoginFormValues) => {
     Keyboard.dismiss();
     setIsLoading(true);
-    alert('submit');
+    dispatch(loginSuccess({email}));
     setIsLoading(false);
   };
 
@@ -66,7 +72,7 @@ const LoginScreen: FC<LoginScreenProps> = props => {
                 onChangeText={handleChange('email')}
                 value={values?.email}
                 onFocus={() => setInputFocus({email: true, password: false})}
-                onBlur={handleBlur('email')}
+                onBlur={() => handleBlur('email')}
                 isFocused={inputFocus.email}
                 keyboardType="email-address"
                 errors={errors.email}
@@ -78,9 +84,8 @@ const LoginScreen: FC<LoginScreenProps> = props => {
                   placeholder="Password"
                   onChangeText={handleChange('password')}
                   value={values?.password}
-                  iconName="cLPassword"
                   onFocus={() => setInputFocus({password: true, email: false})}
-                  onBlur={handleBlur('password')}
+                  onBlur={() => handleBlur('password')}
                   isFocused={inputFocus.password}
                   secureTextEntry={hidePass}
                   onHidePress={() => setHidePass(!hidePass)}
@@ -108,6 +113,11 @@ const LoginScreen: FC<LoginScreenProps> = props => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       keyboardVerticalOffset={0}
       enabled>
+      <StatusBar
+        backgroundColor={Colors.white}
+        translucent={false}
+        barStyle={'dark-content'}
+      />
       <ScrollView
         overScrollMode={'never'}
         style={styles.flex1}
