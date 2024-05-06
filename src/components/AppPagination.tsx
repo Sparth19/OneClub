@@ -19,7 +19,6 @@ const AppPagination: FC<AppPaginationProps> = ({totalPages, onPageChange}) => {
 
   const renderPages = () => {
     const pages = [];
-    const totalPageCount = Math.min(totalPages, 5);
     let startPage = Math.max(1, currentPage - 2);
     let endPage = Math.min(currentPage + 2, totalPages);
 

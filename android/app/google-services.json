@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "46801222298",
+    "firebase_url": "https://rn-place-app-without-expo.firebaseio.com",
+    "project_id": "rn-place-app-without-expo",
+    "storage_bucket": "rn-place-app-without-expo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46801222298:android:a6f8b2e6636c4e615b3d23",
+        "android_client_info": {
+          "package_name": "com.oneclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46801222298-1eqeni4i8eggibmc7hou1qf2sss65tbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoagxAXA-s_u-n1yAXWRSorzmeXSEv5eg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46801222298-1eqeni4i8eggibmc7hou1qf2sss65tbb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
