@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">OneClub</string>
+    <string name="todo">TODO</string>
+    <string name="notification_listener_service_label">notification_listener_service_label</string>
 </resources>
